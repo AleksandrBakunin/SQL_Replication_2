@@ -15,14 +15,16 @@
 
 ### Задание 2
 
-![alt text](https://github.com/AleksandrBakunin/SQL_Replication_1/blob/main/img/%D0%A0%D0%B5%D0%BF%D0%BB%20%D0%B8%20%D0%BC%D0%B0%D1%81%D1%88%20%D1%87.1.PNG)
+**```Вертикальное шардирование```** - это выделение одной или нескольких таблиц на другие сервера.
+Исходя из данного примера я решил, что логичнее всего будет вынести на отдельный сервер таблицу с книгами, т.к. она самая объёмная.
+
+![alt text](https://raw.githubusercontent.com/AleksandrBakunin/SQL_Replication_2/b34e7f2a6f424b6a8d0eb772db8ea0930a7efa37/img/%D0%92%D0%B5%D1%80%D1%82%D0%B8%D0%BA%D0%B0%D0%BB%D1%8C%D0%BD%D0%BE%D0%B5%20%D1%88%D0%B0%D1%80%D0%B4%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5.jpg)
 
 
-Сконфигурированные master и slave машины, репликация работает, ошибок нет.
+**```Горизонтальное шардирование```** - это разделение какой-либо таблицы (или таблиц) на разные сервера.
+В данном примере я решил, что правильно будет вынести юзернеймы и пароли покупателей на отдельный сервер (в целях безопасности данных и их большого объёма), 
+а так же вынес часть таблицы с книгами на отдельный сервер, т.к. она должна быть очень объёмной.
 
+![alt text](https://raw.githubusercontent.com/AleksandrBakunin/SQL_Replication_2/b34e7f2a6f424b6a8d0eb772db8ea0930a7efa37/img/%D0%93%D0%BE%D1%80%D0%B8%D0%B7%D0%BE%D0%BD%D1%82%D0%B0%D0%BB%D1%8C%D0%BD%D0%BE%D0%B5%20%D1%88%D0%B0%D1%80%D0%B4%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5.jpg)
 
-
-![alt text](https://github.com/AleksandrBakunin/SQL_Replication_1/blob/main/img/%D0%A0%D0%B5%D0%BF%D0%BB%20%D0%B8%20%D0%BC%D0%B0%D1%81%D1%88%20%D1%87.1%20-%202.PNG)
-
-
-Конфигурационные файлы my.cnf мастер и слейв серверов.
+---
